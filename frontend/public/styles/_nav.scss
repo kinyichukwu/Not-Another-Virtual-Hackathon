@@ -1,0 +1,148 @@
+nav {
+    background-color: $black;
+    padding: $m-pad $xl-pad;
+    width: 100%;
+    position: relative;
+    // mode toggler
+    input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        &:focus {
+            outline: 0;
+        }
+    }
+    .toggle {
+        height: 32px;
+        width: 70px;
+        border-radius: 16px;
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        border: 2px solid #474755;
+        background: #fff;
+        transition: all 0.2s ease;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: $primary;
+            box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+            transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+        }
+        &:checked {
+            border-color: #654fec;
+            &:after {
+                transform: translatex(38px);
+            }
+        }
+    }
+    @include mobile {
+        padding: $s-pad $l-pad;
+        background: none;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        height: fit-content;
+        padding: $m-pad;
+        background: black;
+    }
+    #mobileMenu {
+        display: none;
+        @include flex-col(space-between);
+        .item-1 {
+            width: 100%;
+            @include flex-row(space-between);
+            #logo {
+                display: none;
+                @include mobile {
+                    display: block;
+                }
+            }
+            .toggles {
+                display: none;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+                @include mobile {
+                    display: flex;
+                }
+            }
+        }
+        @include mobile {
+            display: flex;
+        }
+        .mobile--items {
+            width: 100%;
+            background-color: $primary;
+            min-height: 90vh;
+            background-color: $dark;
+            a {
+                color: $white;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+    #desktopMenu {
+        @include flex-row(space-between);
+        @include mobile {
+            display: none;
+        }
+        a {
+            color: $white;
+            &:active {
+                color: $primary;
+            }
+        }
+        button {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+        }
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    #hamburger {
+        color: $white;
+        font-size: 1.5rem;
+        display: none;
+        @include mobile {
+            display: block;
+        }
+    }
+    .options-container {
+        position: absolute;
+        color: white;
+        right: $xl-pad;
+        bottom: -95px;
+        z-index: 999999999999;
+        background: black;
+        padding: $s-pad;
+        border-radius: 10px;
+        border: 1px solid rgb(44, 44, 44);
+      
+        
+        p {
+            cursor: pointer;
+            width: 100%;
+            padding: 8px 12px;
+            border-radius: 8px;
+            &:nth-child(1) {
+                margin-bottom: 7px;
+            }
+            &:hover {
+                background: $primary;
+            }
+        }
+    }
+}
