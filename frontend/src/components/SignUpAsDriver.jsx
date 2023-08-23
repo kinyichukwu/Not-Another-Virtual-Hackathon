@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
+import { setDoc, doc, collection, getDoc } from 'firebase/firestore';
+import { auth, database, storage } from '../firebaseConfig';
+import { createUserWithEmailAndPassword } from "firebase/auth"
 import { useUser } from '../contexts/UserContext';
 import { handleChangeEvent } from '../helpers/handleChange';
 import { ClipLoader } from 'react-spinners';
@@ -115,9 +119,37 @@ export const SignUpAsDriver = () => {
     }
     try {
       setLoading(true)
+      const document = await getDoc(doc(usersRef, phoneNumber))
+      if (document.exists()) {
+        toast.error("Phone number already in use")
 
-     
-      
+      } else {
+        await setDoc(doc(collection(database, "usersList"), phoneNumber), {
+          accountType: "driver",
+          email: data.email,
+          fullName: fullName,
+          phoneNumber: phoneNumber,
+          carType: carType,
+          carMake: carMake,
+          carBrand: carBrand,
+          carColor: carColor,
+          trn: trn,
+          carModel: carModel,
+          driverBadgeNumber: driverBadgeNumber,
+          driverLicence: driverLicenceURL,
+          proofofOwnership: proofOfOwnershipURL,
+          vehicleFront: vehicleFrontURL,
+          vehicleBack: vehicleBackURL,
+          onGoingRide:false
+        }).then(() => {
+          toast.success('Sign up Successful')
+          navigate('/signin')
+          return setLoading(false)
+        }).catch((err) => {
+          console.log(err);
+          setLoading(false)
+        })
+      }
     }
     catch (err) {
       setLoading(false)

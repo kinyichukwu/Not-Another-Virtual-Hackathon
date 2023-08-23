@@ -5,6 +5,8 @@ import { FaBars } from "react-icons/fa";
 import OptionsPanel from "./OptionsPanel";
 import { useUser } from "../contexts/UserContext";
 import { useUserData } from "../contexts/DataContext";
+import { doc, updateDoc } from "firebase/firestore";
+import { database } from "../firebaseConfig";
 import { toast } from "react-toastify";
 
 export const Nav = () => {
@@ -14,7 +16,8 @@ export const Nav = () => {
   const [status, setStatus] = useState("active");
   const [showOptions, setShowOptions] = useState(false);
   const { userInfo } = useUserData();
-  const click = useRef();
+  const click = useRef()
+
 
   const toggleStatus = async (e) => {
     if (e == true) {
@@ -23,38 +26,35 @@ export const Nav = () => {
       setStatus("inactive");
     }
 
-
+    await updateDoc(doc(database, "usersList", userInfo.phoneNumber), {
+      status: status,
+    })
+      .then(() => {
         if (status == "active") {
           toast.success("You are active");
         } else {
           toast.success("You are inactive");
         }
-  
-      
-       
+      })
+      .catch((err) => {
+        toast.error(err);
+      });
   };
 
   return (
     <nav>
       <div id="desktopMenu">
-        {userInfo && userInfo.accountType !== "driver" ? (
-          <Link to="/">Celo Ride</Link>
-        ) : (
-          <img src="" alt="" id="logo" />
-        )}
+        {userInfo && userInfo.accountType !== "driver" ? <Link to="/">
+          
+        </Link> : <img src="" alt="" id="logo" />}
         {user && (
           <>
             <div className="flex-row" style={{ gap: "2rem" }}>
-              {userInfo && userInfo.accountType !== "driver" && (
-                <Link to="/">Home</Link>
-              )}
-              {userInfo && userInfo.accountType == "driver" && (
-                <Link to="/orders">All Orders</Link>
-              )}
-
-              {userInfo && userInfo.accountType !== "driver" && (
-                <Link to="/my-rides">My Rides</Link>
-              )}
+              {userInfo && userInfo.accountType !== "driver" && <Link to="/">Home</Link>}
+              {userInfo && userInfo.accountType == "driver" && <Link to="/orders">All Orders</Link>}
+            
+              {userInfo && userInfo.accountType !== "driver" && <Link to="/my-rides">My Rides</Link>}
+         
             </div>
             <div>
               {userInfo && userInfo.accountType == "driver" ? (
@@ -93,28 +93,29 @@ export const Nav = () => {
       <div id="mobileMenu">
         <div className="item-1">
           <div>
-            <Link to="/"></Link>
+            <Link to="/">
+            
+            </Link>
           </div>
           <div className="toggles">
-            {userInfo && userInfo.accountType == "driver" ? (
-              <input
-                type="checkbox"
-                className="toggle"
-                id="status-mobile"
-                checked={userInfo?.status === "active" ? true : false}
-                ref={click}
-                onChange={(e) => toggleStatus(e.target.checked)}
-              />
-            ) : null}
-            {user && (
-              <img
+          {userInfo && userInfo.accountType == "driver" ? (
+                <input
+                  type="checkbox"
+                  className="toggle"
+                  id="status-mobile"
+                  checked={userInfo?.status === "active" ? true : false}
+                  ref={click}
+                  onChange={(e) => toggleStatus(e.target.checked)}
+                />
+              ) : null}
+            {user && <img
                 style={{
                   cursor: "pointer",
                   borderRadius: "50%",
                   objectFit: "cover",
-                  width: "30px",
-                  height: "30px",
-                  marginRight: "10px",
+                  width:"30px",
+                  height:"30px",
+                  marginRight:"10px"
                 }}
                 onClick={() => setShowOptions(!showOptions)}
                 src={
@@ -124,35 +125,19 @@ export const Nav = () => {
                 }
                 alt=""
                 className="icon"
-              />
-            )}
+              />}
 
             <FaBars id="hamburger" onClick={() => setShowMnav(!showMnav)} />
+
           </div>
         </div>
         {showMnav && (
           <div className="flex-col mobile--items" style={{ gap: "2rem" }}>
-            {userInfo && userInfo.accountType !== "driver" && (
-              <Link onClick={() => setShowMnav(false)} to="/">
-                Home
-              </Link>
-            )}
-            {userInfo && userInfo.accountType == "driver" && (
-              <Link onClick={() => setShowMnav(false)} to="/orders">
-                All Orders
-              </Link>
-            )}
-            <Link onClick={() => setShowMnav(false)} to="/Messages">
-              Messages
-            </Link>
-            {userInfo && userInfo.accountType !== "driver" && (
-              <Link onClick={() => setShowMnav(false)} to="/my-rides">
-                My Rides
-              </Link>
-            )}
-            <Link onClick={() => setShowMnav(false)} to="/Wallet">
-              Wallet
-            </Link>
+            {userInfo && userInfo.accountType !== "driver" && <Link onClick={() => setShowMnav(false)} to="/">Home</Link>}
+              {userInfo && userInfo.accountType == "driver" && <Link onClick={() => setShowMnav(false)} to="/orders">All Orders</Link>}
+              <Link onClick={() => setShowMnav(false)} to="/Messages">Messages</Link>
+              {userInfo && userInfo.accountType !== "driver" && <Link onClick={() => setShowMnav(false)} to="/my-rides">My Rides</Link>}
+              <Link onClick={() => setShowMnav(false)} to="/Wallet">Wallet</Link>
           </div>
         )}
       </div>

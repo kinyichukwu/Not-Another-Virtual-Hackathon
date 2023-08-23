@@ -1,5 +1,7 @@
+import { signOut } from "firebase/auth";
 import { useUserData } from "../contexts/DataContext";
 import { useUser } from "../contexts/UserContext";
+import { auth } from "../firebaseConfig";
 
 const OptionsPanel = ({showOptions, setShowOptions}) => {
   const { setUser, navigate } = useUser();
@@ -7,7 +9,8 @@ const OptionsPanel = ({showOptions, setShowOptions}) => {
 
   const signOutUser = async () => {
     setUser(null);
-    localStorage.removeItem("defiRideUser");
+    await signOut(auth);
+    localStorage.removeItem("rajloUser");
     navigate("/signin");
     setUserInfo({});
   };

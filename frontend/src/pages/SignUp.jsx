@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SignUpAsDriver } from "../components/SignUpAsDriver";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  setPersistence,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
+import { collection, doc, getDoc, setDoc } from "firebase/firestore";
 import { ClipLoader } from "react-spinners";
+import { auth, database } from "../firebaseConfig";
 import { toast } from "react-toastify";
 import { useUser } from "../contexts/UserContext";
 import { handleChangeEvent } from "../helpers/handleChange";
 
-function SignUp() {
+function Signup() {
+  const { setUser, navigate, usersRef } = useUser();
+
   const [loading, setLoading] = useState(false);
   const [signAsUser, setSignAsUser] = useState(true);
   const [data, setData] = useState({
@@ -21,9 +32,9 @@ function SignUp() {
 
   useEffect(() => {
     if (phoneNumber.includes(" ")) {
-      // setData({
-      //   phoneNumber: phoneNumber.replaceAll(" ", ""),
-      // });
+      setData({
+        phoneNumber: phoneNumber.replaceAll(" ", ""),
+      });
     }
   }, [handleChange]);
 
@@ -34,7 +45,31 @@ function SignUp() {
     setLoading(true);
     try {
       setLoading(true);
-      // solidity login
+      const document = await getDoc(doc(usersRef, phoneNumber));
+      if (document.exists()) {
+        toast.error("Phone number already in use");
+      } else {
+        const userObj = {
+          email: email,
+          fullName: fullName,
+          phoneNumber: phoneNumber,
+          accountType: "user",
+          uid: "",
+        };
+        await setDoc(
+          doc(collection(database, "usersList"), phoneNumber),
+          userObj
+        )
+          .then((res) => {
+            toast.success("Sign up Successful");
+            setLoading(false);
+            return navigate("signin");
+          })
+          .catch((err) => {
+            console.log(err);
+            setLoading(false);
+          });
+      }
     } catch (err) {
       setLoading(false);
       toast.error(err);
@@ -201,4 +236,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Signup;

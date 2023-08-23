@@ -1,4 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import {
+  collection,
+  getDocs,
+  onSnapshot,
+  query,
+  where,
+} from "firebase/firestore";
+import { database } from "../firebaseConfig";
 import { useUser } from "./UserContext";
 import { toast } from "react-toastify";
 
@@ -10,6 +18,7 @@ export const useUserData = () => {
 
 const DataProvider = ({ children }) => {
   const { user } = useUser();
+  const usersRef = collection(database, "usersList");
   const [userInfo, setUserInfo] = useState({});
   const [loadingUserInfo, setLoadingUserInfo] = useState(false);
 
@@ -17,7 +26,15 @@ const DataProvider = ({ children }) => {
     const fetchUserInfo = async () => {
       setLoadingUserInfo(true);
       try {
-       
+        const q = query(
+          collection(database, "usersList"),
+          where("phoneNumber", "==", user.phoneNumber)
+        );
+        await onSnapshot(q, (data) => {
+          data.forEach((user) => {
+            setUserInfo(user.data());
+          });
+        });
         setLoadingUserInfo(false);
       } catch (err) {
         toast.error(err);
