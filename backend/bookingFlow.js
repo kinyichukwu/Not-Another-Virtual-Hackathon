@@ -1,16 +1,19 @@
+import driverLiveLocation from "./gettingLocation.js";
+import riderLiveLocation from "./gettingLocation.js";
+
 // Simulated data
 const drivers = [
   {
     id: 1,
     name: "Driver 1",
-    location: [lat1, lon1],
+    location: [driverrLiveLocation.lat, riderLiveLocation.lng],
     status: "online",
     onRide: false,
   },
   {
     id: 2,
     name: "Driver 2",
-    location: [lat2, lon2],
+    location: [riderLiveLocation.lat2, riderLiveLocation.lon2],
     status: "online",
     onRide: false,
   },

@@ -1,5 +1,4 @@
 
-
 const src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
 //   <p>Driver's Live Location: <span id="driver-location"></span></p>
 //   <p>Rider's Live Location: <span id="rider-location"></span></p>
@@ -9,8 +8,9 @@ const src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=pl
     const API_KEY = 'YOUR_API_KEY';
 
     // Variables to store the live locations
-    let driverLiveLocation = null;
-    let riderLiveLocation = null;
+export const  driverLiveLocation = null;
+export const  riderLiveLocation = null;
+
 
     // Function to update the driver's live location
     function updateDriverLocation() {
@@ -21,7 +21,8 @@ const src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=pl
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-            document.getElementById('driver-location').textContent = `${driverLiveLocation.lat}, ${driverLiveLocation.lng}`;
+            // return driverLiveLocation;
+            // document.getElementById('driver-location').textContent = `${driverLiveLocation.lat}, ${driverLiveLocation.lng}`;
           },
           error => {
             console.error('Error getting driver location:', error);
@@ -41,7 +42,8 @@ const src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=pl
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-            document.getElementById('rider-location').textContent = `${riderLiveLocation.lat}, ${riderLiveLocation.lng}`;
+            // return riderLiveLocation;
+            // document.getElementById('rider-location').textContent = `${riderLiveLocation.lat}, ${riderLiveLocation.lng}`;
           },
           error => {
             console.error('Error getting rider location:', error);
@@ -51,6 +53,7 @@ const src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=pl
         console.error('Geolocation is not supported by this browser.');
       }
     }
+
 
     // Call the updateLocation functions to start tracking
     updateDriverLocation();
