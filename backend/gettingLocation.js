@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Live Location Example</title>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
-</head>
-<body>
-  <p>Driver's Live Location: <span id="driver-location"></span></p>
-  <p>Rider's Live Location: <span id="rider-location"></span></p>
 
-  <script>
+
+const src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+//   <p>Driver's Live Location: <span id="driver-location"></span></p>
+//   <p>Rider's Live Location: <span id="rider-location"></span></p>
+
+//   <script>
     // Replace with your Google Maps API key
     const API_KEY = 'YOUR_API_KEY';
 
@@ -59,6 +55,3 @@
     // Call the updateLocation functions to start tracking
     updateDriverLocation();
     updateRiderLocation();
-  </script>
-</body>
-</html>
