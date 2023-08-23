@@ -1,3 +1,5 @@
+// get more locations
+
 export const locations = [
     {
       lat: 18.116613,

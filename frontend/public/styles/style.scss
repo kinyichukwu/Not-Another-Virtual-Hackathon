@@ -2,15 +2,20 @@
 @import "./mixins";
 @import "./utilities";
 @import "./nav";
+@import "./homepage";
+@import "./modals/authenticationModal";
 @import "./support";
+@import "./modals/supportTicket";
 @import "./signup";
 @import "./successfulRide";
 @import "./bookOrder";
 @import "./driverSignup";
 @import "./wallet";
+@import "./messagepage";
+@import "./messagesearch";
 @import "./accountSettings";
+@import "./messageSearchProfile";
 @import "./myRides";
-
 * {
   margin: 0;
   padding: 0;
