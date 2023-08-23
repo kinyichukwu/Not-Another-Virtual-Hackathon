@@ -1,64 +1,66 @@
-@mixin flex-row($justify: center, $align: center) {
-  display: flex;
-  flex-direction: row;
-  gap: $m-pad;
-  justify-content: $justify;
-  align-items: $align;
+@mixin flex-row($justify: center, $align: center){
+    display: flex;
+    flex-direction: row;
+    gap: $m-pad;
+    justify-content: $justify;
+    align-items: $align;
 }
 
-@mixin flex-col($justify: center) {
-  display: flex;
-  flex-direction: column;
-  gap: $m-pad;
-  justify-content: $justify;
-  align-items: center;
+@mixin flex-col($justify: center){
+    display: flex;
+    flex-direction: column;
+    gap: $m-pad;
+    justify-content: $justify;
+    align-items: center;
 }
 
-@mixin grid($number, $sizes) {
-  display: grid;
-  grid-template-columns: repeat($number, $sizes);
-  gap: 0.5rem;
+@mixin grid($number, $sizes){
+    display: grid;
+    grid-template-columns: repeat($number, $sizes);
+    gap: 0.5rem;
 }
 
 // mobile mode
-@mixin mobile() {
-  @media only screen and (max-width: 800px) {
-    @content;
-  }
+@mixin mobile(){
+    @media only screen and (max-width: 800px) {
+        @content;
+    }
 }
 
 // tablet mode
-@mixin tablet() {
-  @media only screen and (min-width: 800px) and (max-width: 1200px) {
-    @content;
-  }
+@mixin tablet(){
+    @media only screen and (min-width: 800px) and (max-width: 1200px){
+        @content;
+    }
 }
-@mixin dextop() {
-  @media only screen and (min-width: 1200px) and (max-width: 1700px) {
-    @content;
-  }
+@mixin dextop(){
+    @media only screen and (min-width: 1200px) and (max-width: 1700px){
+        @content;
+    }
 }
 
 // custom screen sizes - use to add a custom screen size
-@mixin custom-screen($screenSize) {
-  @media only screen and (max-width: $screenSize) {
-    @content;
-  }
+@mixin custom-screen($screenSize){
+    @media only screen and (max-width: $screenSize) {
+        @content;
+    }
 }
 
-// width for all first divs of containers - Desktop
-@mixin desk-width($width: 70%) {
-  width: $width;
-  margin: auto;
+// width for all first divs of containers - Desktop 
+@mixin desk-width($width: 70%){
+    width: $width;
+    margin: auto;
 }
 
-@mixin tablet-width() {
-  width: 85%;
-  margin: auto;
+@mixin tablet-width(){
+    width: 85%;
+    margin: auto;
 }
 
-// width for all first divs of containers - Mobile
-@mixin mobile-width() {
-  width: 100%;
-  margin: auto;
+// width for all first divs of containers - Mobile 
+@mixin mobile-width(){
+    width: 100%;
+    margin: auto;
 }
+
+
