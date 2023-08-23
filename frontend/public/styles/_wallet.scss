@@ -1,0 +1,116 @@
+.wallet-container {
+    display: flex;
+    padding: 3rem 5rem;
+    background: #ffe9e9;
+    @include mobile {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 2rem;
+        padding: 3rem;
+    }
+    div {
+        width: 60%;
+        &:nth-child(1) {
+            width: 40%;
+            @include mobile {
+                width: 100%;
+            }
+        }
+        @include mobile {
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            color: black;
+            @include mobile {
+                font-size: 25px;
+            }
+        }
+        h1 {
+            font-size: 50px;
+            color: $primary;
+        }
+        h3 {
+            font-size: 25px;
+            padding: .5rem 0;
+        }
+        .add {
+            color: $primary;
+            padding: 5px 0;
+            cursor: pointer;
+        }
+    }
+}
+
+.recent {
+    padding: 5rem;
+    @include mobile {
+        padding: 3rem;
+    }
+    .transaction {
+        max-width: 80%;
+        margin: 2rem auto;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+        @include tablet {
+            max-width: 100%;
+            flex-direction: column;
+            row-gap: 1.3rem;
+            margin: 1rem 0;
+        }
+        @include mobile {
+            max-width: 100%;
+            flex-direction: column;
+            row-gap: 1.3rem;
+            margin: 1rem 0;
+        }
+        .destination {
+            .from {
+                color: $primary;
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                margin-bottom: .7rem;
+                div {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: $primary;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+            .to {
+                color: black;
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                div {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: black;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .fee,
+        .date,
+        .time {
+            p {
+                font-size: 18px;
+            }
+            h3 {
+                font-size: 25px;
+                font-weight: bolder;
+            }
+        }
+    }
+}

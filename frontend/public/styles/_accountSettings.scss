@@ -1,0 +1,96 @@
+.account-settings {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0 0 0rem 100px;
+  @include mobile {
+    margin-top: 52px;
+  }
+  
+  .settings {
+    padding: 2rem 0 0rem 40px;
+    h1 {
+      font-size: 2.3rem;
+      color: black;
+    }
+    @include mobile {
+      padding: 2rem 1rem;
+    }
+
+    &--sub {
+      width: 29vw;
+      display: flex;
+
+      margin: 1.5rem 0;
+
+      justify-content: space-between;
+      align-items: center;
+      div {
+        input[type="checkbox"] {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          -webkit-tap-highlight-color: transparent;
+          cursor: pointer;
+
+          &:focus {
+            outline: 0;
+          }
+        }
+
+        .toggle {
+          height: 32px;
+          width: 70px;
+          border-radius: 16px;
+          display: inline-block;
+          position: relative;
+          margin: 0;
+          border: 2px solid #474755;
+          background: #fff;
+          transition: all 0.2s ease;
+
+          &:after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: $primary;
+            box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+            transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+          }
+          &:checked {
+            border-color: #654fec;
+
+            &:after {
+              transform: translatex(38px);
+            }
+          }
+        }
+      }
+      h3 {
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0.801);
+      }
+      @include tablet {
+        width: 45vw;
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+      @include mobile {
+        width: 80vw;
+        h3 {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 0;
+  }
+}

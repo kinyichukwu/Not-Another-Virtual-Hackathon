@@ -2,7 +2,14 @@
 @import "./mixins";
 @import "./utilities";
 @import "./nav";
+@import "./support";
 @import "./signup";
+@import "./successfulRide";
+@import "./bookOrder";
+@import "./driverSignup";
+@import "./wallet";
+@import "./accountSettings";
+@import "./myRides";
 
 * {
   margin: 0;

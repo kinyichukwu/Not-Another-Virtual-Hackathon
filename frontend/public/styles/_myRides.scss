@@ -1,0 +1,112 @@
+.my-rides {
+    padding: $l-pad $xl-pad;
+    @include tablet {
+        padding: $m-pad;
+    }
+    @include mobile {
+        padding: $m-pad;
+    }
+    h1 {
+        color: black;
+        @include mobile {
+            font-size: 30px;
+        }
+    }
+    .today {
+        padding: 1.5rem 0;
+        .rides {
+            @media (max-width: 1100px) {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+            @media (max-width: 600px) {
+                grid-template-columns: auto;
+            }
+        }
+        h2 {
+            color: black;
+            font-size: 23px;
+            padding: 0;
+            padding: .8rem 0;
+            @include mobile {
+                padding-bottom: 0;
+            }
+        }
+        .ride {
+            @include tablet {
+                column-gap: 20px;
+                max-width: 100%;
+            }
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 2rem 0;
+            @include mobile {
+                max-width: 100%;
+                flex-direction: column;
+                row-gap: 1.3rem;
+                margin: 1rem 0;
+            }
+            @media (max-width:1100px) {
+                max-width: 100%;
+                flex-direction: column;
+                row-gap: 1.3rem;
+                margin: 1rem 0;
+            }
+            .destination {
+                .from {
+                    color: $primary;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                    margin-bottom: .7rem;
+                    div {
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: $primary;
+                    }
+                    p {
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                }
+                .to {
+                    color: black;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                    div {
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: black;
+                    }
+                    p {
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .fee,
+            .date,
+            .time,
+            .payment,
+            .driver,
+            .status {
+                p {
+                    font-size: 18px;
+                }
+                h3 {
+                    font-size: 25px;
+                    font-weight: bolder;
+                }
+            }
+            .status {
+                h3 {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

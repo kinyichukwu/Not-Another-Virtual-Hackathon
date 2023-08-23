@@ -1,513 +1,523 @@
 .inner-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 9px;
-    height: 9px;
-    border-radius: 12.5px;
-    background-color: $primary;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 12.5px;
+  background-color: $primary;
 }
 
 @include mobile {
-    .login {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/signup.jfif");
-        // head texts
-        h2 {
-            font-family: "Alef";
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 33px;
-            letter-spacing: -0.05em;
-            /* White */
-            color: #ffffff;
-        }
-        p {
-            /* Alef Regular: 15px */
-            font-family: "Alef";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 20px;
-            letter-spacing: -0.05em;
-            /* White */
-            color: #ffffffb7;
-        }
-        & &__signup {
-            @include mobile {
-                width: 100%;
-            }
-            p {
-                color: white;
-                margin: $m-margin 0;
-            }
-            &--buttons {
-                margin-bottom: $m-margin;
-                padding-bottom: $m-pad;
-                @include mobile {
-                    margin: auto;
-                }
-                .btn--signup {
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 20px;
-                    letter-spacing: -0.03em;
-                    // padding: 0 ;
-                    color: rgba(255, 255, 255, 0.75);
-                    opacity: 0.75;
-                    border: 0.174872px solid #ffffff;
-                    /* Inside auto layout */
-                    border-radius: 5rem;
-                    background-color: transparent;
-                    align-content: center;
-                    padding-right: $s-margin;
-                    & .circle {
-                        display: inline-block;
-                        width: 15px;
-                        height: 15px;
-                        border-radius: 6rem;
-                        border: 1px solid $primary;
-                        position: relative;
-                        margin-left: $s-margin;
-                    }
-                }
-            }
-        }
-        .signinLink {
-            margin-block: $l-margin;
-            span {
-                color: red;
-            }
-        }
+  .login {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+      url("../images/signup.jfif");
+    // head texts
+    h2 {
+      font-family: "Alef";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 33px;
+      letter-spacing: -0.05em;
+      /* White */
+      color: #ffffff;
     }
-    // sign up form
-    .login__signup--form {
-        @include mobile {
-            margin: auto;
-            width: 100%;
-            div:has(.login__signup--form-input) {
-                width: 100%;
-            }
-        }
-        div {
-            p {
-                color: rgba(255, 255, 255, 0.75) !important;
-            }
-            .login__signup--form-input {
-                background-color: transparent;
-                color: rgba(255, 255, 255, 0.75);
-                border: 1px solid rgba(255, 255, 255, 0.75);
-                border-radius: 40rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                @include mobile {
-                    width: 100%;
-                }
-                img {
-                    width: 1.5rem;
-                    align-self: center;
-                    margin: 0 $m-margin;
-                }
-                input {
-                    background-color: transparent;
-                    color: rgba(255, 255, 255, 0.75);
-                    border: none;
-                    outline: none;
-                    align-self: flex-end;
-                    &:focus {
-                        outline: none;
-                        border-radius: 2rem;
-                    }
-                    @include mobile {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        button {
-            padding: $s-pad;
-            border-radius: 6rem;
-            width: 100%;
-            margin: $l-margin 0;
-        }
+    p {
+      /* Alef Regular: 15px */
+      font-family: "Alef";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: -0.05em;
+      /* White */
+      color: #ffffffb7;
     }
-    .container-mobile {
+    & &__signup {
+      @include mobile {
         width: 100%;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        margin: auto;
-        div {
-            width: 95%;
+      }
+      p {
+        color: white;
+        margin: $m-margin 0;
+      }
+      &--buttons {
+        margin-bottom: $m-margin;
+        padding-bottom: $m-pad;
+        @include mobile {
+          margin: auto;
         }
+        .btn--signup {
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: -0.03em;
+          // padding: 0 ;
+          color: rgba(255, 255, 255, 0.75);
+          opacity: 0.75;
+          border: 0.174872px solid #ffffff;
+          /* Inside auto layout */
+          border-radius: 5rem;
+          background-color: transparent;
+          align-content: center;
+          padding-right: $s-margin;
+          & .circle {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 6rem;
+            border: 1px solid $primary;
+            position: relative;
+            margin-left: $s-margin;
+          }
+        }
+      }
     }
+    .signinLink {
+      margin-block: $l-margin;
+      span {
+        color: red;
+      }
+    }
+  }
+  // sign up form
+  .login__signup--form {
+    @include mobile {
+      margin: auto;
+      width: 100%;
+      div:has(.login__signup--form-input) {
+        width: 100%;
+      }
+    }
+    div {
+      p {
+        color: rgba(255, 255, 255, 0.75) !important;
+      }
+      .login__signup--form-input {
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        border-radius: 40rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mobile {
+          width: 100%;
+        }
+        img {
+          width: 1.5rem;
+          align-self: center;
+          margin: 0 $m-margin;
+        }
+        input {
+          background-color: transparent;
+          color: rgba(255, 255, 255, 0.75);
+          border: none;
+          outline: none;
+          align-self: flex-end;
+          &:focus {
+            outline: none !important;
+            border-radius: 2rem;
+          }
+          @include mobile {
+            width: 100%;
+          }
+        }
+      }
+    }
+    button {
+      padding: $s-pad;
+      border-radius: 6rem;
+      width: 100%;
+      margin: $l-margin 0;
+    }
+  }
+  .container-mobile {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: auto;
+    div {
+      width: 95%;
+    }
+  }
 }
 
 // tablet view
 @include tablet {
-    .login {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/signup.jfif");
-        // head texts
-        h2 {
-            font-family: "Alef";
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            color: #ffffff;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-        p {
-            /* Alef Regular: 15px */
-            font-family: "Alef";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 20px;
-            letter-spacing: -0.05em;
-            /* White */
-            color: #ffffffb7;
-        }
-        & &__signup {
-            p {
-                color: rgba(0, 0, 0, 0.762);
-                margin: $m-margin 0;
-            }
-            &--buttons {
-                margin-bottom: $m-margin;
-                padding-bottom: $m-pad;
-                justify-content: flex-start;
-                .btn--signup {
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 20px;
-                    letter-spacing: -0.03em;
-                    margin-right: $s-margin;
-                    // padding: 0 ;
-                    opacity: 0.75;
-                    border: 0.174872px solid rgba(255, 255, 255, 0.75);
-                    /* Inside auto layout */
-                    border-radius: 8rem;
-                    background-color: transparent;
-                    align-content: center;
-                    padding: 0.7rem 1.3rem;
-                    &:hover {
-                        border: 1px solid $primary;
-                        color: $primary;
-                        .circle {
-                            border: 1px solid $primary;
-                            .inner-circle {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 12.5px;
-                                background-color: $primary;
-                            }
-                        }
-                    }
-                    & .circle {
-                        display: inline-block;
-                        width: 21px;
-                        height: 21px;
-                        border-radius: 6rem;
-                        border: 1px solid rgba(255, 255, 255, 0.75);
-                        position: relative;
-                        margin-left: 0.2rem;
-                        &:hover {
-                            border: 1px solid $primary;
-                            .inner-circle {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 12.5px;
-                                background-color: $primary;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .signinLink {
-            margin-block: $l-margin;
-            span {
-                color: red;
-            }
-        }
+  .login {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+      url("../images/signup.jfif");
+    // head texts
+    h2 {
+      font-family: "Alef";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      color: #ffffff;
+      margin: 0 !important;
+      padding: 0 !important;
     }
-    // sign up form
-    .login__signup--form {
-        div {
-            p {
-                color: rgba(255, 255, 255, 0.75) !important;
+    p {
+      /* Alef Regular: 15px */
+      font-family: "Alef";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: -0.05em;
+      /* White */
+      color: #ffffffb7;
+    }
+    & &__signup {
+      p {
+        color: rgba(0, 0, 0, 0.762);
+        margin: $m-margin 0;
+      }
+      &--buttons {
+        margin-bottom: $m-margin;
+        padding-bottom: $m-pad;
+        justify-content: flex-start;
+        .btn--signup {
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: -0.03em;
+          margin-right: $s-margin;
+          // padding: 0 ;
+          opacity: 0.75;
+          border: 0.174872px solid rgba(255, 255, 255, 0.75);
+          /* Inside auto layout */
+          border-radius: 8rem;
+          background-color: transparent;
+          align-content: center;
+          padding: 0.7rem 1.3rem;
+          &:hover {
+            border: 1px solid $primary;
+            color: $primary;
+            .circle {
+              border: 1px solid $primary;
+              .inner-circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 12px;
+                height: 12px;
+                border-radius: 12.5px;
+                background-color: $primary;
+              }
             }
-            .login__signup--form-input {
-                background-color: transparent;
-                color: rgba(255, 255, 255, 0.75);
-                border: 1px solid rgba(255, 255, 255, 0.75);
-                border-radius: 40rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                img {
-                    width: 1.5rem;
-                    align-self: center;
-                    margin: 0 $m-margin;
-                }
-                input {
-                    background-color: transparent;
-                    color: rgba(255, 255, 255, 0.75);
-                    border: none;
-                    outline: none;
-                    align-self: flex-end;
-                    &:focus {
-                        outline: none;
-                        border-radius: 2rem;
-                    }
-                }
-            }
-        }
-        button {
-            padding: $s-pad;
+          }
+          & .circle {
+            display: inline-block;
+            width: 21px;
+            height: 21px;
             border-radius: 6rem;
-            width: 100%;
-            margin: $l-margin 0;
-        }
-    }
-    .container-mobile {
-        width: 100%;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        margin: auto;
-    }
-    //
-    .login__data__dextop {
-        img {
-            width: 14rem;
-        }
-        h2 {
-            font-size: 3.8rem;
-            margin-top: -2rem;
-        }
-        p.bug {
-            margin-top: 2rem;
-            font-size: 1.2rem;
-        }
-        width: 69%;
-        .login__signup {
-            &--buttons {
-                justify-content: space-between;
+            border: 1px solid rgba(255, 255, 255, 0.75);
+            position: relative;
+            margin-left: 0.2rem;
+            &:hover {
+              border: 1px solid $primary;
+              .inner-circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 12px;
+                height: 12px;
+                border-radius: 12.5px;
+                background-color: $primary;
+              }
             }
+          }
         }
+      }
     }
+    .signinLink {
+      margin-block: $l-margin;
+      span {
+        color: red;
+      }
+    }
+  }
+  // sign up form
+  .login__signup--form {
+    div {
+      p {
+        color: rgba(255, 255, 255, 0.75) !important;
+      }
+      .login__signup--form-input {
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        border-radius: 40rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 1.5rem;
+          align-self: center;
+          margin: 0 $m-margin;
+        }
+        input {
+          background-color: transparent;
+          color: rgba(255, 255, 255, 0.75);
+          border: none;
+          outline: none;
+          align-self: flex-end;
+          &:focus {
+            outline: none;
+            border-radius: 2rem;
+          }
+        }
+      }
+    }
+    button {
+      padding: $s-pad;
+      border-radius: 6rem;
+      width: 100%;
+      margin: $l-margin 0;
+    }
+  }
+  .container-mobile {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: auto;
+  }
+  //
+  .login__data__dextop {
+    img {
+      width: 14rem;
+    }
+    h2 {
+      font-size: 3.8rem;
+      margin-top: -2rem;
+    }
+    p.bug {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    width: 69%;
+    .login__signup {
+      &--buttons {
+        justify-content: space-between;
+      }
+    }
+  }
 }
 
 // dexktop view
 @media (min-width: 1200px) {
-    .login {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        &__signup__dextop {
-            background: linear-gradient( 0deg, rgba(0, 0, 0, 0.789), rgba(0, 0, 0, 0.73)), url("../images/signup.jfif");
-            background-position: 0rem -16rem;
-            display: flex;
-            flex-direction: column;
-            height: 90vh;
-            img {
-                width: 294px;
-                height: 273.68px;
-                margin: 0 auto;
-            }
-            h1 {
-                font-family: "Alef";
-                font-style: normal;
-                font-weight: bold;
-                font-size: 3rem;
-                line-height: 50px;
-                text-align: center;
-                letter-spacing: -0.05em;
-                color: #ffffff;
-                margin-top: -$xl-margin;
-                margin-bottom: $l-margin;
-            }
-            p {
-                width: 412px;
-                height: 51.24px;
-                left: 75px;
-                top: 362.91px;
-                font-family: "Alef";
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 22px;
-                text-align: center;
-                letter-spacing: -0.05em;
-                margin: 0 auto;
-                color: #ffffffb9;
-            }
-            .signinLink {
-                color: white;
-                margin-top: 10rem;
-                a {
-                    color: red;
-                }
-                bottom: 7px;
-            }
+  .login {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__signup__dextop {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.789),
+          rgba(0, 0, 0, 0.73)
+        ),
+        url("../images/signup.jfif");
+      background-position: 0rem -16rem;
+      display: flex;
+      flex-direction: column;
+      height: 90vh;
+      img {
+        width: 294px;
+        height: 273.68px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-family: "Alef";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 50px;
+        text-align: center;
+        letter-spacing: -0.05em;
+        color: #ffffff;
+        margin-top: -$xl-margin;
+        margin-bottom: $l-margin;
+      }
+      p {
+        width: 412px;
+        height: 51.24px;
+        left: 75px;
+        top: 362.91px;
+        font-family: "Alef";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.05em;
+        margin: 0 auto;
+        color: #ffffffb9;
+      }
+      .signinLink {
+        color: white;
+        margin-top: 10rem;
+        a {
+          color: red;
         }
-        // sign up page for dextop
-        & &__signup {
-            p {
-                color: rgba(0, 0, 0, 0.762);
-                margin: $m-margin 0;
-            }
-            &--buttons {
-                margin-bottom: $m-margin;
-                padding-bottom: $m-pad;
-                justify-content: flex-start;
-                .btn--signup {
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 20px;
-                    letter-spacing: -0.03em;
-                    margin-right: $s-margin;
-                    // padding: 0 ;
-                    color: rgba(0, 0, 0, 0.75);
-                    opacity: 0.75;
-                    border: 0.174872px solid rgba(0, 0, 0, 0.75);
-                    /* Inside auto layout */
-                    border-radius: 8rem;
-                    background-color: transparent;
-                    align-content: center;
-                    padding: 0.7rem 1.3rem;
-                    &:hover {
-                        border: 1px solid $primary;
-                        color: $primary;
-                        .circle {
-                            border: 1px solid $primary;
-                            .inner-circle {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 12.5px;
-                                background-color: $primary;
-                            }
-                        }
-                    }
-                    & .circle {
-                        display: inline-block;
-                        width: 21px;
-                        height: 21px;
-                        border-radius: 6rem;
-                        border: 1px solid rgba(0, 0, 0, 0.75);
-                        position: relative;
-                        margin-left: 0.2rem;
-                        &:hover {
-                            border: 1px solid $primary;
-                            .inner-circle {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 12.5px;
-                                background-color: $primary;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        & .login__data__dextop {
-            margin: 0 !important;
-            padding: $m-pad;
-            h2 {
-                color: black;
-                font-weight: bold;
-                font-size: 3rem;
-            }
-            p {
-                color: rgba(0, 0, 0, 0.75);
-            }
-            margin: $l-pad;
-            height: 90vh;
-            overflow-y: scroll;
-            //   this is the sign up form for the dextop
-            .login__signup {
-                &--form {
-                    button {
-                        width: 60%;
-                    }
-                }
-            }
-        }
+        bottom: 7px;
+      }
     }
-    .login__signup--form {
-        div {
-            p {
-                color: rgba(0, 0, 0, 0.75);
+    // sign up page for dextop
+    & &__signup {
+      p {
+        color: rgba(0, 0, 0, 0.762);
+        margin: $m-margin 0;
+      }
+      &--buttons {
+        margin-bottom: $m-margin;
+        padding-bottom: $m-pad;
+        justify-content: flex-start;
+        .btn--signup {
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: -0.03em;
+          margin-right: $s-margin;
+          // padding: 0 ;
+          color: rgba(0, 0, 0, 0.75);
+          opacity: 0.75;
+          border: 0.174872px solid rgba(0, 0, 0, 0.75);
+          /* Inside auto layout */
+          border-radius: 8rem;
+          background-color: transparent;
+          align-content: center;
+          padding: 0.7rem 1.3rem;
+          &:hover {
+            border: 1px solid $primary;
+            color: $primary;
+            .circle {
+              border: 1px solid $primary;
+              .inner-circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 12px;
+                height: 12px;
+                border-radius: 12.5px;
+                background-color: $primary;
+              }
             }
-            .login__signup--form-input {
-                background-color: transparent;
-                color: rgba(0, 0, 0, 0.75);
-                border: 1px solid rgba(0, 0, 0, 0.511);
-                border-radius: 40rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 70%;
-                img {
-                    width: 1.5rem;
-                    align-self: center;
-                    margin: 0;
-                }
-                input {
-                    background-color: transparent;
-                    border: none;
-                    outline: none;
-                    color: rgba(0, 0, 0, 0.754);
-                    align-self: flex-end;
-                    &:focus {
-                        border: none;
-                    }
-                }
-            }
-        }
-        button {
-            padding: $s-pad;
+          }
+          & .circle {
+            display: inline-block;
+            width: 21px;
+            height: 21px;
             border-radius: 6rem;
-            width: 100%;
-            margin: $l-margin 0;
+            border: 1px solid rgba(0, 0, 0, 0.75);
+            position: relative;
+            margin-left: 0.2rem;
+            &:hover {
+              border: 1px solid $primary;
+              .inner-circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 12px;
+                height: 12px;
+                border-radius: 12.5px;
+                background-color: $primary;
+              }
+            }
+          }
         }
+      }
     }
+    & .login__data__dextop {
+      margin: 0 !important;
+      padding: $m-pad;
+      h2 {
+        color: black;
+        font-weight: bold;
+        font-size: 3rem;
+      }
+      p {
+        color: rgba(0, 0, 0, 0.75);
+      }
+      margin: $l-pad;
+      height: 90vh;
+      overflow-y: scroll;
+      //   this is the sign up form for the dextop
+      .login__signup {
+        &--form {
+          button {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+  .login__signup--form {
+    div {
+      p {
+        color: rgba(0, 0, 0, 0.75);
+      }
+      .login__signup--form-input {
+        background-color: transparent;
+        color: rgba(0, 0, 0, 0.75);
+        border: 1px solid rgba(0, 0, 0, 0.511);
+        border-radius: 40rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        img {
+          width: 1.5rem;
+          align-self: center;
+          margin: 0;
+        }
+        input {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          color: rgba(0, 0, 0, 0.754);
+          align-self: flex-end;
+          &:focus {
+            border: none;
+          }
+        }
+      }
+    }
+    button {
+      padding: $s-pad;
+      border-radius: 6rem;
+      width: 100%;
+      margin: $l-margin 0;
+    }
+  }
 }
 
 // utils
 @include dextop {
-    .hide-for-dextop {
-        display: none;
-    }
+  .hide-for-dextop {
+    display: none;
+  }
 }
 
 @include mobile {
-    .hide-for-mobile {
-        display: none;
-    }
+  .hide-for-mobile {
+    display: none;
+  }
+
 }
 
 @include tablet {
-    .hide-for-mobile {
-        display: none;
-    }
+  .hide-for-mobile {
+    display: none;
+  }
+
 }
+

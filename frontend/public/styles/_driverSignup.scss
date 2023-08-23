@@ -1,0 +1,56 @@
+form{
+    @include mobile{
+        margin: auto;
+        @include flex-col;
+        gap: 0;
+        
+        label{
+            color: $white;
+        }
+    }
+      
+
+    .input--item{
+        position: relative;
+        margin-block: $m-margin;
+
+        div{
+            @include mobile{
+                width: 100%;
+            }
+            
+            svg{
+                position: absolute;
+                left: 2%;
+                bottom: 25%;
+
+                @include mobile{
+                    left: 3%;
+                    bottom: 20%;
+                }
+            }
+            input{
+                width: 80%;
+                padding-left: 6%;
+                
+                @include mobile{
+                    width: 100%;
+                    padding-left: 10%;
+                }
+            }
+
+            @include mobile{
+                input[type=file]{
+                    background-color: $white;
+                }
+            }
+        
+            @include tablet{
+                input[type=file]{
+                    background-color: $white;
+                }
+            }
+        }
+    
+    }
+}

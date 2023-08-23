@@ -1,0 +1,129 @@
+#support {
+  @include flex-row;
+
+  margin: 0;
+  padding: 0 0 0rem 4rem;
+
+  @include mobile {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  h2 {
+    color: $black;
+    font-weight: 700;
+    font-size: 2.2rem;
+
+    @include mobile {
+      font-size: 1.7rem;
+    }
+    @include tablet {
+      font-size: 1.7rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .data {
+    @include flex-col;
+
+    align-items: flex-start;
+    padding: $xl-pad;
+    overflow-y: scroll;
+    padding-top: 10rem;
+    height: 87vh;
+    @include mobile {
+      padding: $s-pad;
+      padding-top: 10rem;
+      overflow-y: hidden;
+      justify-content: start;
+    }
+    @include tablet {
+      justify-content: start;
+    }
+
+    div {
+      width: 100%;
+      position: relative;
+
+      .search--icon {
+        position: absolute;
+        top: 25%;
+        left: 3%;
+      }
+
+      input {
+        padding-left: $xl-pad;
+        border-radius: $xl-pad;
+        padding-block: 1.5rem;
+
+        @include mobile {
+          padding-block: 1rem;
+        }
+      }
+    }
+
+    .faq {
+      border-bottom: 1px solid $grey;
+      padding-block: $xs-pad;
+
+      .title {
+        @include flex-row(space-between);
+        padding-block: $s-pad;
+
+        @include mobile {
+          gap: 0rem !important;
+        }
+        @include tablet {
+          gap: 0rem !important;
+        }
+      }
+
+      .description {
+        @include flex-row(start);
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        width: 70%;
+
+        @include mobile {
+          width: 100%;
+        }
+        @include tablet {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  aside {
+    background-color: $paleRed;
+    flex: 1;
+    @include flex-col;
+
+    padding: $m-pad;
+    text-align: center;
+
+    @include mobile {
+      justify-content: flex-start;
+      padding-top: $xl-pad;
+    }
+    @include tablet {
+      justify-content: flex-start;
+      padding-top: $xl-pad;
+    }
+
+    button {
+      background-color: $dark;
+      @include flex-row;
+      gap: 0.5rem;
+      width: max-content;
+    }
+  }
+}

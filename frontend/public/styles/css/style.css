@@ -392,6 +392,162 @@ nav .options-container p:hover {
   background: #ff4040;
 }
 
+#support {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0 0 0rem 4rem;
+}
+@media only screen and (max-width: 800px) {
+  #support {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+#support h2 {
+  color: #000;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+@media only screen and (max-width: 800px) {
+  #support h2 {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #support h2 {
+    font-size: 1.7rem;
+  }
+}
+#support p {
+  font-size: 1.1rem;
+}
+#support .data {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  padding: 4rem;
+  overflow-y: scroll;
+  padding-top: 10rem;
+  height: 87vh;
+}
+@media only screen and (max-width: 800px) {
+  #support .data {
+    padding: 1rem;
+    padding-top: 10rem;
+    overflow-y: hidden;
+    justify-content: start;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #support .data {
+    justify-content: start;
+  }
+}
+#support .data div {
+  width: 100%;
+  position: relative;
+}
+#support .data div .search--icon {
+  position: absolute;
+  top: 25%;
+  left: 3%;
+}
+#support .data div input {
+  padding-left: 4rem;
+  border-radius: 4rem;
+  padding-block: 1.5rem;
+}
+@media only screen and (max-width: 800px) {
+  #support .data div input {
+    padding-block: 1rem;
+  }
+}
+#support .data .faq {
+  border-bottom: 1px solid rgba(30, 30, 30, 0.5);
+  padding-block: 0.5rem;
+}
+#support .data .faq .title {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  #support .data .faq .title {
+    gap: 0rem !important;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #support .data .faq .title {
+    gap: 0rem !important;
+  }
+}
+#support .data .faq .description {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: start;
+  align-items: center;
+}
+#support .data .faq h3 {
+  font-size: 1.2rem;
+}
+#support .data .faq p {
+  width: 70%;
+}
+@media only screen and (max-width: 800px) {
+  #support .data .faq p {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #support .data .faq p {
+    width: 100%;
+  }
+}
+#support aside {
+  background-color: #fff7f7;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  #support aside {
+    justify-content: flex-start;
+    padding-top: 4rem;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #support aside {
+    justify-content: flex-start;
+    padding-top: 4rem;
+  }
+}
+#support aside button, #support aside .btn--secondary {
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: max-content;
+}
+
 .inner-circle {
   position: absolute;
   top: 50%;
@@ -522,7 +678,7 @@ nav .options-container p:hover {
     align-self: flex-end;
   }
   .login__signup--form div .login__signup--form-input input:focus {
-    outline: none;
+    outline: none !important;
     border-radius: 2rem;
   }
 }
@@ -883,6 +1039,1634 @@ nav .options-container p:hover {
     display: none;
   }
 }
+.success--page--container {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.success--page--container h1 {
+  color: black;
+}
+.success--page--container .success--box {
+  padding: 4rem 0;
+  text-align: center;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+}
+.success--page--container .success--box .checkmark--box .top {
+  padding: 0;
+  padding: 2rem 5rem;
+  padding-bottom: 4rem;
+}
+@media only screen and (max-width: 800px) {
+  .success--page--container .success--box .checkmark--box .top {
+    padding: 2rem 3rem;
+  }
+}
+.success--page--container .success--box .checkmark--box .checkmark {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-bottom: 0.6rem;
+}
+.success--page--container .success--box .success--button {
+  padding: 0.5rem 2rem;
+  background: #FF0000;
+  color: white;
+  width: fit-content;
+  border-radius: 30px;
+  box-shadow: 10px 10px 42px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin: 0 auto;
+}
+.success--page--container .success--box .success--button:hover {
+  opacity: 0.5;
+}
+
+.book-order-page {
+  padding: 4rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page {
+    padding: 0;
+  }
+}
+.book-order-page #label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.8);
+}
+.book-order-page .book-order-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .book-order-container {
+    max-width: none;
+    border: none;
+  }
+}
+.book-order-page .book-order-container h1 {
+  color: #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .book-order-container h1 {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+}
+.book-order-page .book-order-container .order-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 5rem;
+  text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .book-order-container .order-tabs {
+    padding: 1.5rem;
+  }
+}
+.book-order-page .book-order-container .order-tabs span {
+  width: 100px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.13);
+}
+.book-order-page .book-order-container .order-tabs p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .book-order-container .order-tabs p {
+    display: none;
+  }
+}
+.book-order-page .book-order-container .order-tabs #num {
+  width: 45px;
+  height: 45px;
+  color: black;
+  background: rgba(0, 0, 0, 0.15);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .book-order-container .order-tabs #num {
+    width: 50px;
+    height: 50px;
+  }
+}
+.book-order-page .book-order-container .order-tabs .active-step #num {
+  color: white;
+  background: #ff4040;
+}
+.book-order-page .book-order-container .order-tabs .active-step p {
+  color: #ff4040;
+}
+.book-order-page .order-details1-container {
+  display: flex;
+  column-gap: 2rem;
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+  position: relative;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details1-container {
+    flex-direction: column;
+    padding-top: 0;
+    row-gap: 2rem;
+  }
+}
+.book-order-page .order-details1-container .info {
+  width: 50%;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details1-container .info {
+    width: 100%;
+  }
+}
+.book-order-page .order-details1-container .info .tabs {
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  background: #ff0000;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+.book-order-page .order-details1-container .info .tabs p {
+  font-weight: bold;
+}
+.book-order-page .order-details1-container .info .heading {
+  background: rgba(0, 0, 0, 0.09);
+  padding: 7px 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.book-order-page .order-details1-container .info .heading h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.book-order-page .order-details1-container .info .date-time {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+}
+.book-order-page .order-details1-container .info .date-time .date {
+  border-right: 1px solid rgba(0, 0, 0, 0.09);
+}
+.book-order-page .order-details1-container .info .date-time .date,
+.book-order-page .order-details1-container .info .date-time .time {
+  width: 50%;
+  padding: 1rem;
+}
+.book-order-page .order-details1-container .info .date-time .date p,
+.book-order-page .order-details1-container .info .date-time .time p {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.8);
+}
+.book-order-page .order-details1-container .info .date-time .date h3,
+.book-order-page .order-details1-container .info .date-time .time h3 {
+  font-size: 16px;
+}
+.book-order-page .order-details1-container .info .pickup-location {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+}
+.book-order-page .order-details1-container .info .pickup-location .left {
+  width: 100%;
+}
+.book-order-page .order-details1-container .info .pickup-location .left input {
+  border: none;
+  outline: none;
+  padding-left: 0;
+  width: 90%;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.book-order-page .order-details1-container .info .pickup-location .add-location {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.book-order-page .order-details1-container .info .pickup-location .add-location p {
+  font-size: 24px;
+  color: #ff4040;
+}
+.book-order-page .order-details1-container .info .dropoff-location {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+}
+.book-order-page .order-details1-container .info .dropoff-location input {
+  border: none;
+  outline: none;
+  padding-left: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.book-order-page .order-details1-container .info .transfer-type {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+}
+.book-order-page .order-details1-container .info .transfer-type select {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: auto 0px;
+  padding-left: 0;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+}
+.book-order-page .order-details1-container .info .extra-time {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.book-order-page .order-details1-container .info .extra-time select {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: auto 0px;
+  padding-left: 0;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+}
+.book-order-page .order-details1-container .map {
+  position: relative;
+  width: 50%;
+  border-radius: 1rem;
+}
+.book-order-page .order-details1-container .map .map-container {
+  width: 100%;
+  height: calc(100% - 40px);
+  border-radius: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details1-container .map .map-container {
+    margin-bottom: 1rem;
+    height: calc(100% - 40px);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details1-container .map {
+    width: 100%;
+    height: 50vh;
+  }
+}
+.book-order-page .order-details1-container .map .continue {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  padding: 12px 2rem;
+  background: #ff0000;
+  color: white;
+  width: fit-content;
+  border-radius: 30px;
+  box-shadow: 10px 10px 42px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details1-container .map .continue {
+    position: initial;
+    margin: auto;
+  }
+}
+.book-order-page .order-details1-container .map .continue p {
+  font-weight: bold;
+}
+.book-order-page .order-details1-container .map .continue:hover {
+  opacity: 0.5;
+}
+.book-order-page .order-details2-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.5rem;
+  position: relative;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container {
+    flex-direction: column;
+  }
+}
+.book-order-page .order-details2-container .buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .buttons {
+    position: initial;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.book-order-page .order-details2-container .buttons .next {
+  right: 20px;
+  bottom: -20px;
+  position: absolute;
+  padding: 12px 2rem;
+  background: #ff0000;
+  color: white;
+  width: fit-content;
+  border-radius: 30px;
+  box-shadow: 10px 10px 42px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .buttons .next {
+    position: initial;
+  }
+}
+.book-order-page .order-details2-container .buttons .next p {
+  font-weight: bold;
+}
+.book-order-page .order-details2-container .buttons .next:hover {
+  opacity: 0.5;
+}
+.book-order-page .order-details2-container .buttons .back {
+  left: 20px;
+  bottom: -20px;
+  position: absolute;
+  padding: 12px 2rem;
+  background: white;
+  color: black;
+  width: fit-content;
+  border-radius: 30px;
+  box-shadow: 10px 10px 42px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .buttons .back {
+    margin-bottom: 0.7rem;
+    position: initial;
+  }
+}
+.book-order-page .order-details2-container .buttons .back p {
+  font-weight: bold;
+}
+.book-order-page .order-details2-container .buttons .back:hover {
+  background-color: #eee;
+}
+.book-order-page .order-details2-container .summary {
+  width: 30%;
+  background: rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1rem;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .summary {
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+  }
+}
+.book-order-page .order-details2-container .summary h2 {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 0.4rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .summary h2 {
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+}
+.book-order-page .order-details2-container .summary div {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .summary div {
+    text-align: center;
+  }
+}
+.book-order-page .order-details2-container .summary div h3 {
+  font-size: 16px;
+}
+.book-order-page .order-details2-container .summary div p {
+  font-size: 13px;
+  opacity: 0.6;
+}
+.book-order-page .order-details2-container .summary div:nth-child(5) {
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+}
+.book-order-page .order-details2-container .summary div:nth-child(5) span {
+  width: 50%;
+}
+.book-order-page .order-details2-container .available-rides {
+  width: 100%;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .available-rides {
+    width: 100%;
+  }
+}
+.book-order-page .order-details2-container .available-rides .heading {
+  background: rgba(0, 0, 0, 0.07);
+  padding: 7px 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.book-order-page .order-details2-container .available-rides .heading h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.book-order-page .order-details2-container .available-rides .options {
+  display: flex;
+}
+.book-order-page .order-details2-container .available-rides .options div {
+  padding: 1.5rem;
+  width: 33.33%;
+  padding-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .available-rides .options div {
+    padding: 1.5rem 10px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+}
+.book-order-page .order-details2-container .available-rides .options div select {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: auto 0px;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.book-order-page .order-details2-container .available-rides .options div p {
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0.6;
+  font-size: 14px;
+}
+.book-order-page .order-details2-container .available-rides .red-heading {
+  background: #ff4040;
+  padding: 7px 15px;
+  color: white;
+}
+.book-order-page .order-details2-container .available-rides .red-heading h3 {
+  font-size: 12px;
+}
+.book-order-page .order-details2-container .vehicles {
+  padding: 1.5rem;
+  max-height: 500px;
+  overflow-y: scroll;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .vehicles {
+    padding: 1.5rem 0;
+    max-height: none;
+    overflow-y: auto;
+    border-bottom: none;
+  }
+}
+.book-order-page .order-details2-container .vehicles .vehicle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  column-gap: 1.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .vehicles .vehicle {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+.book-order-page .order-details2-container .vehicles .vehicle .img {
+  width: 50%;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .vehicles .vehicle .img {
+    width: 100%;
+  }
+}
+.book-order-page .order-details2-container .vehicles .vehicle .img img {
+  width: 100%;
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details {
+  width: 50%;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .vehicles .vehicle .vehicle-details {
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details h3 {
+  font-size: 24px;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .vehicles .vehicle .vehicle-details h3 {
+    font-size: 17px;
+  }
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details #driver {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 5px 0;
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details #driver b {
+  color: rgb(0, 0, 0);
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details .price-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details .price-btn h1 {
+  padding: 0;
+  border: none;
+  color: #ff4040;
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details .price-btn .btn-selected {
+  padding: 11px 1.5rem;
+  background: #ff0000;
+  color: white;
+  width: fit-content;
+  border-radius: 30px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .vehicles .vehicle .vehicle-details .price-btn .btn-selected {
+    padding: 7px 13px;
+  }
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details .price-btn .btn-selected p {
+  font-weight: bold;
+  font-size: 13px;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details2-container .vehicles .vehicle .vehicle-details .price-btn .btn-selected p {
+    font-size: 12px;
+  }
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details .price-btn .btn-selected:hover {
+  opacity: 0.5;
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details .info-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details .info-icons div {
+  display: flex;
+  column-gap: 1rem;
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details .info-icons div span {
+  display: flex;
+  column-gap: 0.3rem;
+}
+.book-order-page .order-details2-container .vehicles .vehicle .vehicle-details .info-icons div span p {
+  font-weight: bold;
+  font-size: 15px;
+}
+.book-order-page .order-details3-container {
+  display: flex;
+  align-items: start;
+  padding: 1.5rem;
+  position: relative;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container {
+    flex-direction: column;
+  }
+}
+.book-order-page .order-details3-container .buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .buttons {
+    position: initial;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.book-order-page .order-details3-container .buttons .next {
+  right: 20px;
+  bottom: -20px;
+  position: absolute;
+  padding: 12px 2rem;
+  background: #ff0000;
+  color: white;
+  width: fit-content;
+  border-radius: 30px;
+  box-shadow: 10px 10px 42px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .buttons .next {
+    position: initial;
+  }
+}
+.book-order-page .order-details3-container .buttons .next p {
+  font-weight: bold;
+}
+.book-order-page .order-details3-container .buttons .next:hover {
+  opacity: 0.5;
+}
+.book-order-page .order-details3-container .buttons .back {
+  left: 20px;
+  bottom: -20px;
+  position: absolute;
+  padding: 12px 2rem;
+  background: white;
+  color: black;
+  width: fit-content;
+  border-radius: 30px;
+  box-shadow: 10px 10px 42px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .buttons .back {
+    margin-bottom: 0.7rem;
+    position: initial;
+  }
+}
+.book-order-page .order-details3-container .buttons .back p {
+  font-weight: bold;
+}
+.book-order-page .order-details3-container .buttons .back:hover {
+  background-color: #eee;
+}
+.book-order-page .order-details3-container .summary {
+  width: 30%;
+  background: rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1rem;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .summary {
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+  }
+}
+.book-order-page .order-details3-container .summary h2 {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .summary h2 {
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+}
+.book-order-page .order-details3-container .summary .price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px 0;
+}
+.book-order-page .order-details3-container .summary .price p:nth-child(1) {
+  color: black;
+  opacity: 1;
+  font-weight: bold;
+}
+.book-order-page .order-details3-container .summary .price p:nth-child(1) i {
+  opacity: 0.6;
+}
+.book-order-page .order-details3-container .summary .price p:nth-child(2) {
+  color: #ff4040;
+  opacity: 1;
+  font-weight: bold;
+}
+.book-order-page .order-details3-container .summary .details {
+  padding: 1rem 0;
+}
+.book-order-page .order-details3-container .summary .details div {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .summary .details div {
+    text-align: center;
+  }
+}
+.book-order-page .order-details3-container .summary .details div h3 {
+  font-size: 16px;
+}
+.book-order-page .order-details3-container .summary .details div p {
+  font-size: 13px;
+  opacity: 0.6;
+}
+.book-order-page .order-details3-container .summary .details div:nth-child(5) {
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+}
+.book-order-page .order-details3-container .summary .details div:nth-child(5) span {
+  width: 50%;
+}
+.book-order-page .order-details3-container .contact-details {
+  width: 70%;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .contact-details {
+    width: 100%;
+  }
+}
+.book-order-page .order-details3-container .contact-details .heading {
+  background: rgba(0, 0, 0, 0.07);
+  padding: 7px 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.book-order-page .order-details3-container .contact-details .heading h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.book-order-page .order-details3-container .contact-details .scan-user {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .contact-details .scan-user {
+    flex-direction: column;
+  }
+}
+.book-order-page .order-details3-container .contact-details .scan-user .user-info {
+  width: 70%;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .contact-details .scan-user .user-info {
+    width: 100%;
+  }
+}
+.book-order-page .order-details3-container .contact-details .scan-user .user-info div {
+  padding-bottom: 1.5rem;
+}
+.book-order-page .order-details3-container .contact-details .scan-user .user-info div p {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0.6;
+}
+.book-order-page .order-details3-container .contact-details .scan-user .user-info div h3 {
+  font-size: 23px;
+  font-weight: bold;
+}
+.book-order-page .order-details3-container .contact-details .scan-user .scan {
+  width: 30%;
+  text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .contact-details .scan-user .scan {
+    width: 100%;
+  }
+}
+.book-order-page .order-details3-container .contact-details .scan-user .scan img {
+  width: 100%;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .contact-details .scan-user .scan img {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+.book-order-page .order-details3-container .contact-details .scan-user .scan h3 {
+  font-size: 19px;
+  text-align: center;
+  opacity: 0.9;
+  margin: 5px;
+}
+.book-order-page .order-details3-container .contact-details #pay-with {
+  padding-left: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.book-order-page .order-details3-container .contact-details .img-list {
+  display: flex;
+  align-items: center;
+  object-fit: contain;
+  padding-left: 2rem;
+  column-gap: 1rem;
+}
+.book-order-page .order-details3-container .contact-details .img-list img {
+  width: 50px;
+}
+.book-order-page .order-details3-container .contact-details #info {
+  font-size: 12px;
+  padding-left: 2rem;
+  font-weight: bold;
+  opacity: 0.5;
+  margin-top: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details3-container .contact-details #info {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.book-order-page .order-details4-container {
+  display: flex;
+  padding: 1.5rem;
+  column-gap: 10px;
+  position: relative;
+  row-gap: 1rem;
+}
+.book-order-page .order-details4-container .buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .buttons {
+    position: initial;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.book-order-page .order-details4-container .buttons .next {
+  right: 20px;
+  bottom: -20px;
+  position: absolute;
+  padding: 12px 2rem;
+  background: #ff0000;
+  color: white;
+  width: fit-content;
+  border-radius: 30px;
+  box-shadow: 10px 10px 42px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .buttons .next {
+    position: initial;
+  }
+}
+.book-order-page .order-details4-container .buttons .next p {
+  font-weight: bold;
+}
+.book-order-page .order-details4-container .buttons .next:hover {
+  opacity: 0.5;
+}
+.book-order-page .order-details4-container .buttons .back {
+  left: 20px;
+  bottom: -20px;
+  position: absolute;
+  padding: 12px 2rem;
+  background: white;
+  color: black;
+  width: fit-content;
+  border-radius: 30px;
+  box-shadow: 10px 10px 42px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .buttons .back {
+    margin-bottom: 0.7rem;
+    position: initial;
+  }
+}
+.book-order-page .order-details4-container .buttons .back p {
+  font-weight: bold;
+}
+.book-order-page .order-details4-container .buttons .back:hover {
+  background-color: #eee;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container {
+    flex-direction: column;
+  }
+}
+.book-order-page .order-details4-container .first,
+.book-order-page .order-details4-container .second,
+.book-order-page .order-details4-container .third {
+  width: 33.33%;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .first,
+  .book-order-page .order-details4-container .second,
+  .book-order-page .order-details4-container .third {
+    width: 100%;
+  }
+}
+.book-order-page .order-details4-container .first .details {
+  background: rgba(0, 0, 0, 0.08);
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  padding: 1.5rem 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .first .details {
+    border-radius: 1rem;
+  }
+}
+.book-order-page .order-details4-container .first .details h2 {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .first .details h2 {
+    margin-bottom: 0.3rem;
+  }
+}
+.book-order-page .order-details4-container .first .details div {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+.book-order-page .order-details4-container .first .details div h3 {
+  font-size: 16px;
+}
+.book-order-page .order-details4-container .first .details div p {
+  font-size: 13px;
+  opacity: 0.6;
+}
+.book-order-page .order-details4-container .first .details .head {
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+}
+.book-order-page .order-details4-container .first .details .head h2 {
+  margin-bottom: 0;
+}
+.book-order-page .order-details4-container .first .details .head p {
+  text-transform: uppercase;
+  padding: 5px 14px;
+  font-size: 12px;
+  border: 1px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.book-order-page .order-details4-container .first .details .pay-meth {
+  padding-top: 2rem;
+  border-bottom: none;
+}
+.book-order-page .order-details4-container .first .details .pay-meth i {
+  color: #ff0000;
+}
+.book-order-page .order-details4-container .first .details .names {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+  align-items: center;
+  border-bottom: none;
+}
+.book-order-page .order-details4-container .first .details .names span {
+  width: 50%;
+}
+.book-order-page .order-details4-container .second .summary {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .second .summary {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+.book-order-page .order-details4-container .second .summary h2 {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .second .summary h2 {
+    margin-bottom: 0.3rem;
+  }
+}
+.book-order-page .order-details4-container .second .summary .map .map-container {
+  width: 100%;
+}
+.book-order-page .order-details4-container .second .summary .head {
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+}
+.book-order-page .order-details4-container .second .summary .head h2 {
+  margin-bottom: 0;
+}
+.book-order-page .order-details4-container .second .summary .head p {
+  text-transform: uppercase;
+  padding: 5px 14px;
+  font-size: 12px;
+  border: 1px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.book-order-page .order-details4-container .second .summary .price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px 0;
+}
+.book-order-page .order-details4-container .second .summary .price p:nth-child(1) {
+  color: black;
+  opacity: 1;
+  font-weight: bold;
+}
+.book-order-page .order-details4-container .second .summary .price p:nth-child(1) i {
+  opacity: 0.6;
+}
+.book-order-page .order-details4-container .second .summary .price p:nth-child(2) {
+  color: #ff4040;
+  opacity: 1;
+  font-weight: bold;
+}
+.book-order-page .order-details4-container .second .summary .details {
+  padding: 1rem 0;
+}
+.book-order-page .order-details4-container .second .summary .details div {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .second .summary .details div {
+    text-align: center;
+  }
+}
+.book-order-page .order-details4-container .second .summary .details div h3 {
+  font-size: 16px;
+}
+.book-order-page .order-details4-container .second .summary .details div p {
+  font-size: 13px;
+  opacity: 0.6;
+}
+.book-order-page .order-details4-container .second .summary .details div:nth-child(6) {
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+}
+.book-order-page .order-details4-container .second .summary .details div:nth-child(6) span {
+  width: 50%;
+}
+.book-order-page .order-details4-container .third .img {
+  border-top-right-radius: 1rem;
+  overflow: hidden;
+  max-height: 300px;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .third .img {
+    border-top-left-radius: 1rem;
+  }
+}
+.book-order-page .order-details4-container .third .img img {
+  width: 100%;
+}
+.book-order-page .order-details4-container .third .details {
+  background: rgba(0, 0, 0, 0.08);
+  border-bottom-right-radius: 1rem;
+  padding: 1.5rem 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .third .details {
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+}
+.book-order-page .order-details4-container .third .details h2 {
+  color: black;
+  font-size: 19px;
+  margin-bottom: 0.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .book-order-page .order-details4-container .third .details h2 {
+    margin-bottom: 0.3rem;
+  }
+}
+.book-order-page .order-details4-container .third .details div {
+  padding: 1rem 0;
+}
+.book-order-page .order-details4-container .third .details div h3 {
+  font-size: 13px;
+  opacity: 0.6;
+}
+.book-order-page .order-details4-container .third .details div p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.book-order-page .order-details4-container .third .details .head {
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+}
+.book-order-page .order-details4-container .third .details .head h2 {
+  margin-bottom: 0;
+}
+.book-order-page .order-details4-container .third .details .head p {
+  text-transform: uppercase;
+  padding: 5px 14px;
+  font-size: 12px;
+  border: 1px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.book-order-page .order-details4-container .third .message {
+  padding: 1rem 0;
+}
+.book-order-page .order-details4-container .third .message textarea {
+  width: 100%;
+  height: 200px;
+}
+
+.locations--list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 0.3rem;
+  height: 200px;
+  overflow-x: scroll;
+  position: absolute;
+  z-index: 9999999999;
+}
+.locations--list div {
+  width: 100%;
+}
+.locations--list div p {
+  cursor: pointer;
+  color: #fff;
+  background-color: #1e1e1e;
+  padding: 1rem 0.3rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.locations--list div p:hover {
+  color: #ff4040;
+}
+.locations--list div hr {
+  width: 100%;
+  border: 1px solid #fff;
+  margin-block: 0.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+  form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  form label {
+    color: #fff;
+  }
+}
+form .input--item {
+  position: relative;
+  margin-block: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  form .input--item div {
+    width: 100%;
+  }
+}
+form .input--item div svg {
+  position: absolute;
+  left: 2%;
+  bottom: 25%;
+}
+@media only screen and (max-width: 800px) {
+  form .input--item div svg {
+    left: 3%;
+    bottom: 20%;
+  }
+}
+form .input--item div input {
+  width: 80%;
+  padding-left: 6%;
+}
+@media only screen and (max-width: 800px) {
+  form .input--item div input {
+    width: 100%;
+    padding-left: 10%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  form .input--item div input[type=file] {
+    background-color: #fff;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  form .input--item div input[type=file] {
+    background-color: #fff;
+  }
+}
+
+.wallet-container {
+  display: flex;
+  padding: 3rem 5rem;
+  background: #ffe9e9;
+}
+@media only screen and (max-width: 800px) {
+  .wallet-container {
+    flex-direction: column;
+    text-align: center;
+    row-gap: 2rem;
+    padding: 3rem;
+  }
+}
+.wallet-container div {
+  width: 60%;
+}
+.wallet-container div:nth-child(1) {
+  width: 40%;
+}
+@media only screen and (max-width: 800px) {
+  .wallet-container div:nth-child(1) {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .wallet-container div {
+    width: 100%;
+    text-align: center;
+  }
+}
+.wallet-container div h2 {
+  color: black;
+}
+@media only screen and (max-width: 800px) {
+  .wallet-container div h2 {
+    font-size: 25px;
+  }
+}
+.wallet-container div h1 {
+  font-size: 50px;
+  color: #ff4040;
+}
+.wallet-container div h3 {
+  font-size: 25px;
+  padding: 0.5rem 0;
+}
+.wallet-container div .add {
+  color: #ff4040;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.recent {
+  padding: 5rem;
+}
+@media only screen and (max-width: 800px) {
+  .recent {
+    padding: 3rem;
+  }
+}
+.recent .transaction {
+  max-width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .recent .transaction {
+    max-width: 100%;
+    flex-direction: column;
+    row-gap: 1.3rem;
+    margin: 1rem 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .recent .transaction {
+    max-width: 100%;
+    flex-direction: column;
+    row-gap: 1.3rem;
+    margin: 1rem 0;
+  }
+}
+.recent .transaction .destination .from {
+  color: #ff4040;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 0.7rem;
+}
+.recent .transaction .destination .from div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff4040;
+}
+.recent .transaction .destination .from p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.recent .transaction .destination .to {
+  color: black;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.recent .transaction .destination .to div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: black;
+}
+.recent .transaction .destination .to p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.recent .transaction .fee p,
+.recent .transaction .date p,
+.recent .transaction .time p {
+  font-size: 18px;
+}
+.recent .transaction .fee h3,
+.recent .transaction .date h3,
+.recent .transaction .time h3 {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.account-settings {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 0 0rem 100px;
+}
+@media only screen and (max-width: 800px) {
+  .account-settings {
+    margin-top: 52px;
+  }
+}
+.account-settings .settings {
+  padding: 2rem 0 0rem 40px;
+}
+.account-settings .settings h1 {
+  font-size: 2.3rem;
+  color: black;
+}
+@media only screen and (max-width: 800px) {
+  .account-settings .settings {
+    padding: 2rem 1rem;
+  }
+}
+.account-settings .settings--sub {
+  width: 29vw;
+  display: flex;
+  margin: 1.5rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.account-settings .settings--sub div input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+.account-settings .settings--sub div input[type=checkbox]:focus {
+  outline: 0;
+}
+.account-settings .settings--sub div .toggle {
+  height: 32px;
+  width: 70px;
+  border-radius: 16px;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  border: 2px solid #474755;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+.account-settings .settings--sub div .toggle:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ff4040;
+  box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+  transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+}
+.account-settings .settings--sub div .toggle:checked {
+  border-color: #654fec;
+}
+.account-settings .settings--sub div .toggle:checked:after {
+  transform: translatex(38px);
+}
+.account-settings .settings--sub h3 {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.801);
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .account-settings .settings--sub {
+    width: 45vw;
+  }
+  .account-settings .settings--sub h3 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .account-settings .settings--sub {
+    width: 80vw;
+  }
+  .account-settings .settings--sub h3 {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .account-settings {
+    padding: 0;
+  }
+}
+
+.my-rides {
+  padding: 2rem 4rem;
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .my-rides {
+    padding: 1.5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .my-rides {
+    padding: 1.5rem;
+  }
+}
+.my-rides h1 {
+  color: black;
+}
+@media only screen and (max-width: 800px) {
+  .my-rides h1 {
+    font-size: 30px;
+  }
+}
+.my-rides .today {
+  padding: 1.5rem 0;
+}
+@media (max-width: 1100px) {
+  .my-rides .today .rides {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 600px) {
+  .my-rides .today .rides {
+    grid-template-columns: auto;
+  }
+}
+.my-rides .today h2 {
+  color: black;
+  font-size: 23px;
+  padding: 0;
+  padding: 0.8rem 0;
+}
+@media only screen and (max-width: 800px) {
+  .my-rides .today h2 {
+    padding-bottom: 0;
+  }
+}
+.my-rides .today .ride {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .my-rides .today .ride {
+    column-gap: 20px;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .my-rides .today .ride {
+    max-width: 100%;
+    flex-direction: column;
+    row-gap: 1.3rem;
+    margin: 1rem 0;
+  }
+}
+@media (max-width: 1100px) {
+  .my-rides .today .ride {
+    max-width: 100%;
+    flex-direction: column;
+    row-gap: 1.3rem;
+    margin: 1rem 0;
+  }
+}
+.my-rides .today .ride .destination .from {
+  color: #ff4040;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 0.7rem;
+}
+.my-rides .today .ride .destination .from div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff4040;
+}
+.my-rides .today .ride .destination .from p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.my-rides .today .ride .destination .to {
+  color: black;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.my-rides .today .ride .destination .to div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: black;
+}
+.my-rides .today .ride .destination .to p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.my-rides .today .ride .fee p,
+.my-rides .today .ride .date p,
+.my-rides .today .ride .time p,
+.my-rides .today .ride .payment p,
+.my-rides .today .ride .driver p,
+.my-rides .today .ride .status p {
+  font-size: 18px;
+}
+.my-rides .today .ride .fee h3,
+.my-rides .today .ride .date h3,
+.my-rides .today .ride .time h3,
+.my-rides .today .ride .payment h3,
+.my-rides .today .ride .driver h3,
+.my-rides .today .ride .status h3 {
+  font-size: 25px;
+  font-weight: bolder;
+}
+.my-rides .today .ride .status h3 {
+  color: #ff4040;
+}
+
 * {
   margin: 0;
   padding: 0;
