@@ -53,7 +53,7 @@ function Signup() {
         setWeb3(newWeb3);
 
         toast.success("Welcome to defi rides");
-        navigate("/");
+        navigate("/book-order");
       } catch (error) {
         console.error("User denied access to MetaMask");
         toast.error("User denied access to MetaMask");
@@ -63,7 +63,6 @@ function Signup() {
       toast.error("MetaMask not found");
     }
     setLoading(false);
-   
   };
 
   return (
