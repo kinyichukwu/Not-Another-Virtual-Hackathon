@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import { SignUpAsDriver } from "../components/SignUpAsDriver";
 import {
   createUserWithEmailAndPassword,
@@ -14,9 +14,10 @@ import { auth, database } from "../firebaseConfig";
 import { toast } from "react-toastify";
 import { useUser } from "../contexts/UserContext";
 import { handleChangeEvent } from "../helpers/handleChange";
+import Web3 from "web3";
 
 function Signup() {
-  const { setUser, navigate, usersRef } = useUser();
+  const { setUser, navigate, usersRef, web3, setWeb3 } = useUser();
 
   const [loading, setLoading] = useState(false);
   const [signAsUser, setSignAsUser] = useState(true);
@@ -40,42 +41,29 @@ function Signup() {
 
   console.log(phoneNumber);
 
-  const userSignUp = async (e) => {
+  const connectToWallet = async (e) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      setLoading(true);
-      const document = await getDoc(doc(usersRef, phoneNumber));
-      if (document.exists()) {
-        toast.error("Phone number already in use");
-      } else {
-        const userObj = {
-          email: email,
-          fullName: fullName,
-          phoneNumber: phoneNumber,
-          accountType: "user",
-          uid: "",
-        };
-        await setDoc(
-          doc(collection(database, "usersList"), phoneNumber),
-          userObj
-        )
-          .then((res) => {
-            toast.success("Sign up Successful");
-            setLoading(false);
-            return navigate("signin");
-          })
-          .catch((err) => {
-            console.log(err);
-            setLoading(false);
-          });
+    if (window.ethereum) {
+      const newWeb3 = new Web3(window.ethereum);
+      try {
+        // Request user permission to connect
+        setLoading(true);
+        await window.ethereum.enable();
+        setWeb3(newWeb3);
+
+        toast.success("Welcome to defi rides");
+        navigate("/");
+      } catch (error) {
+        console.error("User denied access to MetaMask");
+        toast.error("User denied access to MetaMask");
       }
-    } catch (err) {
-      setLoading(false);
-      toast.error(err);
-    } finally {
-      setLoading(false);
+    } else {
+      console.error("MetaMask not found");
+      toast.error("MetaMask not found");
     }
+    setLoading(false);
+   
   };
 
   return (
@@ -126,7 +114,7 @@ function Signup() {
           <div className="login__signup--form">
             {signAsUser ? (
               <>
-                <form onSubmit={userSignUp}>
+                <form onSubmit={connectToWallet}>
                   <div className="input--item">
                     <label htmlFor="full name">Full Name</label>
                     <div>
