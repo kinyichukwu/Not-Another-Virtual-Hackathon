@@ -24,6 +24,8 @@ const UserProvider = ({ children }) => {
   const usersRef = collection(database, "usersList");
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [web3, setWeb3] = useState(null);
+  const [walletAddress, setWalletAddress] = useState("");
 
   useEffect(() => {
     setLoading(true);
@@ -57,12 +59,31 @@ const UserProvider = ({ children }) => {
     getUser();
   }, []);
 
+  useEffect(() => {
+    const getWalletAddress = async () => {
+      if (web3) {
+        const accounts = await web3.eth.getAccounts();
+        if (accounts.length > 0) {
+          setWalletAddress(accounts[0]);
+          console.log(accounts[0]);
+        } else {
+          toast.error("No accounts found in MetaMask");
+          navigate("/signup");
+        }
+      }
+    };
+
+    getWalletAddress();
+  }, [web3]);
+
   const value = {
     navigate,
     usersRef,
     user,
     setUser,
     loading,
+    web3,
+    setWeb3,
   };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;

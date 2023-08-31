@@ -32,7 +32,6 @@ function App() {
                   <Route path="/signin" element={<SignIn />} />
                   <Route path="/ride-success" element={<SuccessfulRide />} />
                   <Route path="/book-order" element={<BookOrder />} />
-
                   <Route path="/my-rides" element={<MyRides />} />
                 </Routes>
               </DriverContextProvider>
